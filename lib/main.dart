@@ -104,7 +104,7 @@ class _CustomButtonState extends State<CustomButton> {
       onTap: widget.onTap,
       child: AnimatedOpacity(
         opacity: _pressing ? 0.4 : 1,
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: 160),
         child: Container(
           height: 56,
           width: 56,
