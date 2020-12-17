@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   const CustomButton({
     this.onTap,
     Key key,
@@ -77,9 +77,14 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
+  _CustomButtonState createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Container(
         height: 56,
         width: 56,
