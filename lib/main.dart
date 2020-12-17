@@ -80,3 +80,32 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    this.onTap,
+    Key key,
+  }) : super(key: key);
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 56,
+        width: 56,
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(28),
+        ),
+        alignment: Alignment.center,
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
