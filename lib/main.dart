@@ -59,17 +59,22 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: Container(
-        height: 56,
-        width: 56,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(28),
-        ),
-        alignment: Alignment.center,
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
+      floatingActionButton: GestureDetector(
+        onTap: () {
+          _incrementCounter();
+        },
+        child: Container(
+          height: 56,
+          width: 56,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(28),
+          ),
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
         ),
       ),
     );
