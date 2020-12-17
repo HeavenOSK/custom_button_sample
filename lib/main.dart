@@ -102,17 +102,21 @@ class _CustomButtonState extends State<CustomButton> {
         });
       },
       onTap: widget.onTap,
-      child: Container(
-        height: 56,
-        width: 56,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(28),
-        ),
-        alignment: Alignment.center,
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
+      child: AnimatedOpacity(
+        opacity: _pressing ? 0.4 : 1,
+        duration: Duration(milliseconds: 200),
+        child: Container(
+          height: 56,
+          width: 56,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(28),
+          ),
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
         ),
       ),
     );
