@@ -96,6 +96,11 @@ class _CustomButtonState extends State<CustomButton> {
           _pressing = false;
         });
       },
+      onTapCancel: () {
+        setState(() {
+          _pressing = false;
+        });
+      },
       onTap: widget.onTap,
       child: Container(
         height: 56,
