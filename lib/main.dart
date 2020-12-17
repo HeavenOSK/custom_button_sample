@@ -86,12 +86,22 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTapDown: (_) {
+        setState(() {
+          _pressing = true;
+        });
+      },
+      onTapUp: (_) {
+        setState(() {
+          _pressing = false;
+        });
+      },
       onTap: widget.onTap,
       child: Container(
         height: 56,
         width: 56,
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: _pressing ? Colors.grey : Colors.blue,
           borderRadius: BorderRadius.circular(28),
         ),
         alignment: Alignment.center,
