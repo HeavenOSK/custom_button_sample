@@ -113,7 +113,7 @@ class _CustomButtonState extends State<CustomButton> {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(28),
           ),
-          margin: EdgeInsets.all(12),
+          margin: EdgeInsets.all(6),
           alignment: Alignment.center,
           child: Icon(
             Icons.add,
