@@ -106,7 +106,7 @@ class _CustomButtonState extends State<CustomButton> {
         height: 56,
         width: 56,
         decoration: BoxDecoration(
-          color: _pressing ? Colors.grey : Colors.blue,
+          color: Colors.blue,
           borderRadius: BorderRadius.circular(28),
         ),
         alignment: Alignment.center,
