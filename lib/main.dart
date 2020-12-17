@@ -86,6 +86,7 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTapDown: (_) {
         setState(() {
           _pressing = true;
@@ -112,6 +113,7 @@ class _CustomButtonState extends State<CustomButton> {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(28),
           ),
+          margin: EdgeInsets.all(12),
           alignment: Alignment.center,
           child: Icon(
             Icons.add,
