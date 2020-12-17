@@ -81,6 +81,8 @@ class CustomButton extends StatefulWidget {
 }
 
 class _CustomButtonState extends State<CustomButton> {
+  bool _pressing = false;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
