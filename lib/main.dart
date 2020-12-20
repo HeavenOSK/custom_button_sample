@@ -106,18 +106,20 @@ class _CustomButtonState extends State<CustomButton> {
       child: AnimatedOpacity(
         opacity: _pressing ? 0.4 : 1,
         duration: Duration(milliseconds: 160),
-        child: Container(
-          height: 56,
-          width: 56,
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.circular(28),
-          ),
-          margin: EdgeInsets.all(6),
-          alignment: Alignment.center,
-          child: Icon(
-            Icons.add,
-            color: Colors.white,
+        child: Padding(
+          padding: EdgeInsets.all(6),
+          child: Container(
+            height: 56,
+            width: 56,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(28),
+            ),
+            alignment: Alignment.center,
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
